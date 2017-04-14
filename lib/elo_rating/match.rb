@@ -75,7 +75,8 @@ class EloRating::Match
     end
 
     def updated_rating
-      (rating + total_rating_adjustments).round
+      "test"
+     # (rating + total_rating_adjustments).round
     end
 
     def total_rating_adjustments
