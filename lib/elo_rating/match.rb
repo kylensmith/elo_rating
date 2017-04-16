@@ -3,7 +3,7 @@
 class EloRating::Match
 
   # All the players of the match.
-  attr_reader :players, :id
+  attr_reader :players
 
   # Creates a new match with no players.
   def initialize
@@ -51,7 +51,7 @@ class EloRating::Match
 
   class Player
   # :nodoc:
-    attr_reader :rating, :place, :match
+    attr_reader :rating, :place, :match, :id
     def initialize(match:, rating:, place: nil, winner: nil, id: nil)
       validate_attributes!(rating: rating, place: place, winner: winner, id: id)
       @match = match
