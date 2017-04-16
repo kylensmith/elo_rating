@@ -65,7 +65,7 @@ class EloRating::Match
       @winner
     end
 
-    def validate_attributes!(rating:, place:, winner:)
+    def validate_attributes!(rating:, place:, winner:, id:)
       raise ArgumentError, 'Rating must be numeric' unless rating.is_a? Numeric
       raise ArgumentError, 'Winner and place cannot both be specified' if place && winner
       raise ArgumentError, 'Place must be numeric' unless place.nil? || place.is_a?(Numeric)
